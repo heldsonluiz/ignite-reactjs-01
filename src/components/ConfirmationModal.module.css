@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  width: 30rem;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  color: var(--gray-200)
+}
+
+.modalHeader {
+ padding: 1rem 1.5rem;
+}
+
+.modalTitle {
+  margin: 0;
+}
+
+.modalBody {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--gray-400);
+  font-size: 0.875rem;
+}
+
+.modalFooter {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modalFooter button {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: bold;
+  gap: 5px;
+  line-height: 1.05;
+  padding: 0.875rem 1rem ;
+  transition: background-color 0.15s;
+}
+
+.modalFooter .buttonConfirm{
+  background: var(--green-dark);
+  border: 0;
+  color: var(--gray-100);
+}
+
+.modalFooter .buttonConfirm:hover {
+  background: var(--green);
+}
+
+.modalFooter .buttonCancel{
+  background: var(--gray-500);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.modalFooter .buttonCancel:hover{
+  background: var(--danger);
+  border: 1px solid var(--gray-500);
+  color: var(--gray-500);
+}

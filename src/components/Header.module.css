@@ -1,0 +1,25 @@
+.header {
+  background-color: var(--gray-700);
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.header img {
+  height: 3rem;
+}
+
+.header .badge {
+  position: relative;
+  top: 0.3rem;
+  left: -0.7rem;
+}
+
+.header .badge img {
+  position: relative;
+  height: 1.4rem;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--gray-700);
+  border-radius: 2rem;
+}

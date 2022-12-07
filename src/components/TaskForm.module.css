@@ -1,0 +1,51 @@
+.inputForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: calc(0px - 1.75rem);
+  max-width: 100%;
+}
+
+.inputForm input {
+  padding: 1rem;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  flex: 1;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.inputForm input:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 1px var(--orange-dark);
+  color: var(--gray-100);
+}
+
+.inputForm button[type=submit] {
+  align-items: center;
+  background: var(--green-dark);
+  border: 0;
+  border-radius: 8px;
+  color: var(--gray-100);
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: bold;
+  gap: 5px;
+  line-height: 1.05;
+  padding: 1.2rem;
+  transition: background-color 0.15s;
+}
+
+.inputForm button[type=submit]:not(:disabled):hover {
+  background: var(--green);
+}
+
+.inputForm button[type=submit]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

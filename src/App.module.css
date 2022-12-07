@@ -1,0 +1,46 @@
+.wrapper {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.board {
+  width: 100%;
+  flex-direction: column;
+  margin: 4rem 0 0;
+}
+
+.board header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem
+}
+
+.board header .totalTasks {
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.board header .finishedTasks {
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.board header .counter {
+  background: var(--gray-400);
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  color: var(--gray-200);
+  font-weight: bold;
+  font-size: 0.7rem
+}
