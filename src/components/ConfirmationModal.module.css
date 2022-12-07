@@ -1,6 +1,6 @@
 .modal {
   align-items: center;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .modalHeader {
- padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .modalTitle {
@@ -49,11 +49,11 @@
   font-weight: bold;
   gap: 5px;
   line-height: 1.05;
-  padding: 0.875rem 1rem ;
+  padding: 0.875rem 1rem;
   transition: background-color 0.15s;
 }
 
-.modalFooter .buttonConfirm{
+.modalFooter .buttonConfirm {
   background: var(--green-dark);
   border: 0;
   color: var(--gray-100);
@@ -63,13 +63,13 @@
   background: var(--green);
 }
 
-.modalFooter .buttonCancel{
+.modalFooter .buttonCancel {
   background: var(--gray-500);
   border: 1px solid var(--danger);
   color: var(--danger);
 }
 
-.modalFooter .buttonCancel:hover{
+.modalFooter .buttonCancel:hover {
   background: var(--danger);
   border: 1px solid var(--gray-500);
   color: var(--gray-500);

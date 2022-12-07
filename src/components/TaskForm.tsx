@@ -1,33 +1,31 @@
-import styles from './TaskForm.module.css'
-import {PlusCircle} from 'phosphor-react'
-import {useState, ChangeEvent, FormEvent} from 'react'
+import styles from "./TaskForm.module.css";
+import { PlusCircle } from "phosphor-react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 interface TaskFormProps {
-  onCreateNewTask: (comment: string) => void
+  onCreateNewTask: (comment: string) => void;
 }
 
-export function TaskForm ({onCreateNewTask}:TaskFormProps) {
-  const [itemDescription, setItemDescription] = useState('')
+export function TaskForm({ onCreateNewTask }: TaskFormProps) {
+  const [itemDescription, setItemDescription] = useState("");
 
-  function handleNewTaskChange (event: ChangeEvent<HTMLInputElement>) {
-    setItemDescription(event.target.value)
- }
+  function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
+    setItemDescription(event.target.value);
+  }
 
-  function handleCreateNewTask (event: FormEvent) {
-    event.preventDefault()
+  function handleCreateNewTask(event: FormEvent) {
+    event.preventDefault();
 
-    if (!itemDescription) return
+    if (!itemDescription) return;
 
-    onCreateNewTask(itemDescription)
-    setItemDescription('')
- }
+    onCreateNewTask(itemDescription);
+    setItemDescription("");
+  }
 
-  const isNewTaskEmpty = itemDescription.trim().length < 1
+  const isNewTaskEmpty = itemDescription.trim().length < 1;
 
   return (
-    <form
-      className={styles.inputForm}
-      onSubmit={handleCreateNewTask}>
+    <form className={styles.inputForm} onSubmit={handleCreateNewTask}>
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
@@ -36,8 +34,8 @@ export function TaskForm ({onCreateNewTask}:TaskFormProps) {
       />
       <button type="submit" disabled={isNewTaskEmpty}>
         Criar
-        <PlusCircle size={16}/>
+        <PlusCircle size={16} />
       </button>
     </form>
-  )
+  );
 }
