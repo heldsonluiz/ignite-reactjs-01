@@ -1,15 +1,15 @@
 import './global.css'
 import styles from './App.module.css'
 
-import { Header } from './components/Header'
-import { TaskForm } from './components/TaskForm'
-import { Task, TaskItem } from './components/Task'
-import { EmptyBoard } from './components/EmptyBoard'
-import { useState } from 'react'
-import { ConfirmationModal } from './components/ConfirmationModal'
+import {Header} from './components/Header'
+import {TaskForm} from './components/TaskForm'
+import {Task, TaskItem} from './components/Task'
+import {EmptyBoard} from './components/EmptyBoard'
+import {useState} from 'react'
+import {ConfirmationModal} from './components/ConfirmationModal'
 
 export function App() {
-  const [taskList, setTaskList] = useState<TaskItem[]>([]);
+  const [taskList, setTaskList] = useState<TaskItem[]>([])
   const [showDeleteConfirmationModal, setShowDeleteConfirmationModal] = useState(false)
   const [taskToDelete, setTaskToDelete] = useState('')
 
@@ -20,10 +20,10 @@ export function App() {
       id: newId,
       description: newTaskDescription,
       status: false
-    }
+   }
 
     setTaskList([...taskList, newTask])
-  }
+ }
 
   function updateTask (taskId: string, newStatus: boolean) {
     let newList = [...taskList]
@@ -32,19 +32,19 @@ export function App() {
     newList[index] = {...newList[index], status: newStatus}
 
     setTaskList(newList)
-  }
+ }
 
   function showDeleteTask (taskId: string) {
     setTaskToDelete(taskId)
     setShowDeleteConfirmationModal(true)
-  }
+ }
   function deleteTask () {
     const newTaskList = taskList.filter(item => item.id !== taskToDelete)
     setTaskList([...newTaskList])
 
     setShowDeleteConfirmationModal(false)
     setTaskToDelete('')
-  }
+ }
 
   let totalTasks = taskList.length
   let finishedTasks = taskList.filter(item => item.status).length
@@ -86,9 +86,9 @@ export function App() {
                   onUpdateTask={updateTask}
                 />
               )
-            })}
+           })}
           </div>
-        }
+       }
 
       </div>
     </div>

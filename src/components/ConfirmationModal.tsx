@@ -1,9 +1,9 @@
 import styles from './ConfirmationModal.module.css'
 
 interface ConfirmationModalProps {
-  visible: boolean;
-  onClose: () => void;
-  onConfirm: () => void;
+  visible: boolean
+  onClose: () => void
+  onConfirm: () => void
 }
 
 export function ConfirmationModal ({visible, onClose, onConfirm}: ConfirmationModalProps) {
@@ -11,10 +11,10 @@ export function ConfirmationModal ({visible, onClose, onConfirm}: ConfirmationMo
 
   function handleCancel () {
     onClose()
-  }
+ }
   function handleConfirm () {
     onConfirm()
-  }
+ }
 
   return (
     <div className={styles.modal}>

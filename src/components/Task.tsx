@@ -1,11 +1,11 @@
-import { Trash } from 'phosphor-react';
+import {Trash} from 'phosphor-react'
 import styles from './Task.module.css'
-import { useState, ChangeEvent } from 'react';
+import {useState, ChangeEvent} from 'react'
 
 export type TaskItem = {
   id: string
-  description: string;
-  status: boolean;
+  description: string
+  status: boolean
 }
 
 export interface Taskprops extends TaskItem {
@@ -17,14 +17,14 @@ export function Task ({id, description, status, onDeleteTask, onUpdateTask}: Tas
   const [checked, setChecked] = useState(status)
 
   function handleDeleteTask () {
-    onDeleteTask(id);
-  }
+    onDeleteTask(id)
+ }
 
   function handleUpdateTask (event: ChangeEvent) {
     let newValue = !checked
     setChecked(newValue)
     onUpdateTask(id, newValue)
-  }
+ }
 
   return (
     <div className={`${styles.taskItem} ${status ? styles.finished : ""}`} >

@@ -10,16 +10,16 @@
 }
 
 .header .badge {
+  left: -0.7rem;
   position: relative;
   top: 0.3rem;
-  left: -0.7rem;
 }
 
 .header .badge img {
-  position: relative;
+  border: 2px solid var(--gray-700);
+  border-radius: 2rem;
   height: 1.4rem;
   margin: 0;
   padding: 0;
-  border: 2px solid var(--gray-700);
-  border-radius: 2rem;
+  position: relative;
 }

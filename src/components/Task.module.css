@@ -1,13 +1,12 @@
 .taskItem {
-  padding: 1rem;
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
   border-radius: 8px;
   color: var(--gray-100);
-
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
+  padding: 1rem;
   word-break: break-word;
 }
 
@@ -16,18 +15,18 @@
 }
 
 .taskItem .description {
-  display: flex;
   align-items: center;
+  display: flex;
   font-size: 0.875rem;
   flex: 1;
 }
 
 .taskItem .deleteIcon {
   color: var(--gray-300);
-  padding: 0.375rem;
   border-radius: 4px;
-  line-height: 0;
   flex-grow: 0;
+  line-height: 0;
+  padding: 0.375rem;
 }
 
 .taskItem .deleteIcon:hover {
@@ -43,17 +42,17 @@
 
 input[type="checkbox"] {
   appearance: none;
-  cursor: pointer;
-  width: 1.125em;
-  height: 1.125em;
-  padding: 0.375rem;
   border: 2px solid var(--green);
   border-radius: 100%;
-  transform: translateY(0.15em);
+  cursor: pointer;
   display: grid;
-  place-content: center;
-  margin: 3px;
+  height: 1.125em;
   line-height: 0;
+  margin: 3px;
+  padding: 0.375rem;
+  place-content: center;
+  transform: translateY(0.15em);
+  width: 1.125em;
 }
 
 input[type="checkbox"]:hover {
@@ -61,13 +60,13 @@ input[type="checkbox"]:hover {
 }
 
 input[type="checkbox"]:before {
+  background: var(--orange-dark);
+  border-radius: 100%;
   content: "";
-  width: 1.125em;
   height: 1.125em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  background: var(--orange-dark);
-  border-radius: 100%;
+  width: 1.125em;
 }
 
 input[type="checkbox"]:hover:before {
@@ -78,19 +77,19 @@ input[type="checkbox"]:checked:before {
   transform: scale(1);
 }
 input[type="checkbox"]:checked:after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  left: 2px;
   background: white;
-  width: 2px;
-  height: 2px;
-  box-shadow: 
+  box-shadow:
     1px 0 0 white,
     3px 0 0 white,
     3px -2px 0 white,
     3px -4px 0 white,
     3px -6px 0 white,
     3px -8px 0 white;
+  content: '';
+  height: 2px;
+  left: 2px;
+  position: absolute;
+  top: 7px;
   transform: rotate(45deg);
+  width: 2px;
 }

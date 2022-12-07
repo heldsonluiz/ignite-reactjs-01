@@ -1,20 +1,22 @@
 .modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255,255,255,0.5);
-  display: flex;
   align-items: center;
+  background-color: rgba(255,255,255,0.5);
+  bottom: 0;
+  display: flex;
   justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
 }
 
 .modalContent {
-  width: 30rem;
   background-color: var(--gray-500);
   border-radius: 8px;
-  color: var(--gray-200)
+  color: var(--gray-200);
+  margin: 0 2rem;
+  width: 30rem;
 }
 
 .modalHeader {
@@ -26,16 +28,16 @@
 }
 
 .modalBody {
-  padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--gray-400);
   font-size: 0.875rem;
+  padding: 1rem 1.5rem;
 }
 
 .modalFooter {
-  padding: 1rem 1.5rem;
   display: flex;
-  justify-content: flex-end;
   gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
 }
 
 .modalFooter button {
