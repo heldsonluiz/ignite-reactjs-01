@@ -1,6 +1,6 @@
 import {Trash} from 'phosphor-react'
 import styles from './Task.module.css'
-import {useState, ChangeEvent} from 'react'
+import {useState} from 'react'
 
 export type TaskItem = {
   id: string
@@ -20,8 +20,8 @@ export function Task ({id, description, status, onDeleteTask, onUpdateTask}: Tas
     onDeleteTask(id)
  }
 
-  function handleUpdateTask (event: ChangeEvent) {
-    let newValue = !checked
+  function handleUpdateTask () {
+    const newValue = !checked
     setChecked(newValue)
     onUpdateTask(id, newValue)
  }

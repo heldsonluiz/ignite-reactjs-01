@@ -16,7 +16,7 @@ export function App() {
   function createNewTask (newTaskDescription: string) {
     const newId = `${newTaskDescription.substring(0,4)}-${Math.floor(Math.random() + Date.now())}`
 
-    let newTask: TaskItem = {
+    const newTask: TaskItem = {
       id: newId,
       description: newTaskDescription,
       status: false
@@ -26,7 +26,7 @@ export function App() {
  }
 
   function updateTask (taskId: string, newStatus: boolean) {
-    let newList = [...taskList]
+    const newList = [...taskList]
 
     const index = newList.findIndex(item => item.id === taskId)
     newList[index] = {...newList[index], status: newStatus}
@@ -46,8 +46,8 @@ export function App() {
     setTaskToDelete('')
  }
 
-  let totalTasks = taskList.length
-  let finishedTasks = taskList.filter(item => item.status).length
+  const totalTasks = taskList.length
+  const finishedTasks = taskList.filter(item => item.status).length
 
   return (
     <div className="App">
