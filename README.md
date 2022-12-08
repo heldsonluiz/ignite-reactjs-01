@@ -1,9 +1,8 @@
- ![Logo alterado do projeto](src/assets/todo-logo.svg)
+![Logo alterado do projeto](src/assets/todo-logo.svg)
 
 # ignite-reactjs-01
 
-
-Este projeto trata-se da resolução do desafio proposto ao fim do **Projeto 01** da **Trilha ReactJs** da Rocketseat. 
+Este projeto trata-se da resolução do desafio proposto ao fim do **Projeto 01** da **Trilha ReactJs** da Rocketseat.
 
 Para essa aplicação foi fornecido um layout para seguir e implementar todas as funcionalidades desenhadas no figma. A ideia é desenvolver uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
 
@@ -22,4 +21,13 @@ $ npm i
 
 # roda o projeto
 $ npm run dev
+
+# identifica erros e warnings de código no projeto
+$ npm run lint
+
+# corrige os erros de código no projeto
+$ npm run lint-fix
+
+# formata o código com o Prettier
+$ npm run prettier-fix
 ```

@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "eslint . && vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "prettier-check": "prettier --check .",
+    "prettier-fix": "prettier --write ."
   },
   "dependencies": {
     "phosphor-react": "^1.4.1",
@@ -23,6 +25,7 @@
     "@vitejs/plugin-react": "^2.2.0",
     "eslint": "^8.29.0",
     "eslint-plugin-react": "^7.31.11",
+    "prettier": "2.8.1",
     "typescript": "^4.9.3",
     "vite": "^3.2.3"
   }

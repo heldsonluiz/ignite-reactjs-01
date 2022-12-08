@@ -1,11 +1,11 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
-    root: true,
-    rules:{
-        'no-debugger':['warn'],
-        'no-console':['warn']
-    }
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  root: true,
+  rules: {
+    "no-debugger": ["warn"],
+    "no-console": ["warn"],
+  },
 };
